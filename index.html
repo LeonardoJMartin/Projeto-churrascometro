@@ -11,30 +11,107 @@
 
 <body>
     <div class="container">
-        <h1 id="titulo">Churrascômetro</h1>
-        <div class="qtdPessoas">
-            <ul>
+        <div class="sessao">
+            <h1 id="titulo">Churrascômetro</h1>
+
+            <ul class="quantidades">
                 <li class="miniContainer">
                     <label class="labels">Quantidade de adultos</label>
-                    <input type="number" id="qtdAdultos" placeholder="Adultos">
+                    <input type="number" class="inputQtds" id="qtdAdultos" placeholder="Adultos">
                 </li>
 
                 <li class="miniContainer">
                     <label class="labels">Quantidade de crianças</label>
-                    <input type="number" id="qtdCriancas" placeholder="Crianças">
+                    <input type="number" class="inputQtds" id="qtdCriancas" placeholder="Crianças">
                 </li>
 
                 <li class="miniContainer">
                     <label class="labels">Duração do churrasco</label>
-                    <input type="text" id="duracaoChurrasco" placeholder="Horas">
+                    <input type="text" class="inputQtds" id="duracaoChurrasco" placeholder="Horas">
                 </li>
             </ul>
 
-            
-            <button id="botao" onclick="calculaCarne()">Calcular</button>
         </div>
 
-        <div id="resultado" ></div>
+        <div class="sessao">
+            <h2>Seleciona os tipos de carnes</h2>
+
+            <div class="opcoesCarnes">
+                <h3 class="labelCarnes">Carnes Vermelhas</h3>
+
+                <ul id="carnesVermelhas">
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Picanha</label>
+                    </li>
+
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Costela</label>
+                    </li>
+
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Vazio</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="opcoesCarnes">
+                <h3 class="labelCarnes">Carnes Brancas</h3>
+
+                <ul id="carnesBrancas">
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Coxinha da asa</label>
+                    </li>
+
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Coxa</label>
+                    </li>
+
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Sobrecoxa</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="opcoesCarnes">
+                <h3 class="labelCarnes">Aperitivos</h3>
+
+                <ul id="aperitivos">
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Coração</label>
+                    </li>
+
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Salsichão</label>
+                    </li>
+
+                    <li class="options">
+                        <input type="checkbox">
+                        <label>Pão com alho</label>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <div class="sessao" id="sessaoResultado" hidden>
+            <h2>Resultado</h2>
+            <div id="resultado"></div>
+        </div>
+
+        <div id="sessaoButtons">
+            <button class="botao" onclick="calculaCarne()">Calcular</button>
+            <button class="botao" onclick="limparCampos()"> Limpar</button>
+        </div>
     </div>
 
     <script src="./script.js"></script>

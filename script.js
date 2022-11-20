@@ -42,5 +42,19 @@ function calculaCarne() {
     result.innerHTML= `<p>Total de Carne: ${resultCarne} kg</p>`;
     result.innerHTML+= `<p>Total de Cerveja: ${cerveja} litros</p>`;
     result.innerHTML+= `<p>Total de Refri/Água: ${refri} litros</p>`;
+   
+    desocultaSessao();
+}
 
+function desocultaSessao(){
+    document.getElementById('sessaoResultado').hidden=false;
+}
+
+
+function limparCampos(){
+    document.getElementById('qtdAdultos').value = "";
+    document.getElementById('qtdCriancas').value = "";
+    document.getElementById('duracaoChurrasco').value = "";
+
+    document.getElementById('sessaoResultado').hidden=true;
 }
