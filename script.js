@@ -43,7 +43,9 @@ function calculaCarne() {
     result.innerHTML+= `<p>Total de Cerveja: ${cerveja} litros</p>`;
     result.innerHTML+= `<p>Total de Refri/Água: ${refri} litros</p>`;
    
-    desocultaSessao();
+    if(adultos>=0 && duracao>0){
+        desocultaSessao();
+    }
 }
 
 function desocultaSessao(){
